@@ -10,36 +10,23 @@ const LexsynergySDK = require('lexsynergysdk');
 ```
 construct an instance
 ```javascript
+const LexsynergySDK = require('lexsynergysdk');
 /**
- * need to pass the api url as argument
- * url should include api version
- * this SDK is developed base on API version 1.6
+ * @param0 {string} api url
+ *   url should include api version
+ *   this SDK is developed base on API version 1.6
  */
 const lexsynergy = new LexsynergySDK('https://api.lexsynergy.com/1.6');
 ```
-to call API
+
+call method
 ```javascript
 /**
- * prototypes are naming by rule <http method><ResourcePath>
- * for example:
- *   GET /domains/info -> getDomainsInfo
- *   POST /handles/create -> postHandlesCreate
- * more info see JSDoc in index.js or official document
- */
-lexsynergy.getAccountBalance(api_key, api_secret)
-  .then(rslt => {
-    // this rslt is http response body
-    console.log(rslt);
-  });
-```
-to call API not implement in this SDK
-```javascript
-/**
- * param0 resource path
- * param1 http method
- * param2 api key
- * param3 api secret
- * param4 data (optional)
+ * param0 {string} resource path
+ * param1 {string} http method
+ * param2 {string} api key
+ * param3 {string} api secret
+ * param4 {string} data (optional)
  */
 lexsynergy.request('/path/to/resource', 'GET', api_key, api_secret, data)
   .then(rslt => {
@@ -48,12 +35,8 @@ lexsynergy.request('/path/to/resource', 'GET', api_key, api_secret, data)
   })
 ```
 
-## dependencies
+## Dependencies
 * axios
 * lodash
 * uuid
 * qs
-
-英文不好, 請笑納
-
-簡單來說就是將document中的所有方法進行實作, 並將輸入輸出參數都以JSDoc做紀錄, 搭配vscode提示, 可以簡單快速介接Lexsyncergy的API
