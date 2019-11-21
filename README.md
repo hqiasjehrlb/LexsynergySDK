@@ -5,11 +5,11 @@ to implement API methods with node js
 
 ## Usage
 to include
-```
-const LexsynergySDK = require('./index.js');
+```javascript
+const LexsynergySDK = require('lexsynergysdk');
 ```
 construct an instance
-```
+```javascript
 /**
  * need to pass the api url as argument
  * url should include api version
@@ -18,7 +18,7 @@ construct an instance
 const lexsynergy = new LexsynergySDK('https://api.lexsynergy.com/1.6');
 ```
 to call API
-```
+```javascript
 /**
  * prototypes are naming by rule <http method><ResourcePath>
  * for example:
@@ -33,7 +33,7 @@ lexsynergy.getAccountBalance(api_key, api_secret)
   });
 ```
 to call API not implement in this SDK
-```
+```javascript
 /**
  * param0 resource path
  * param1 http method
