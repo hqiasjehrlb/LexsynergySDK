@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js ./"
   },
   "author": "xian@brandma.co",
   "license": "ISC",
+  "pre-commit": ["lint"],
   "dependencies": {
     "axios": "^0.19.0",
     "lodash": "^4.17.15",
     "qs": "^6.9.0",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "pre-commit": "^1.2.2"
   }
 }

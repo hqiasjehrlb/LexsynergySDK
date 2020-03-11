@@ -14,7 +14,7 @@ module.exports = class API {
   }
 
   get request () { return doRequestMethod(this); }
-}
+};
 
 class LexsynergyError extends Error {
   constructor (error) {
